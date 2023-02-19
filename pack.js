@@ -1,7 +1,15 @@
-const { constants } = require('fs')
 const { Readable, Writable } = require('streamx')
 const { StringDecoder } = require('string_decoder')
 const b4a = require('b4a')
+
+const constants = {
+  S_IFMT: 61440,
+  S_IFBLK: 24576,
+  S_IFCHR: 8192,
+  S_IFDIR: 16384,
+  S_IFIFO: 4096,
+  S_IFLNK: 40960
+}
 
 const headers = require('./headers')
 
